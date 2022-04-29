@@ -11,6 +11,7 @@
     margin-top: 20px;
     padding: 10px;
     font-size: 24px;
+    height: 120px;
 }
 .navigation li{
     padding: 15px;
@@ -28,10 +29,11 @@ ul img{
 }
 .title {
     color: white;
-    font-size: 32px;;
+    font-size: 32px;
     text-align: center;
 }
 .title p {
+    text-align: center;
     font-size: 26px;
     filter: blur(1px);
 }
@@ -61,17 +63,16 @@ ul img{
     grid-template-columns: repeat(5,1fr);
     margin-bottom: 30px;
 }
-.activites h3, p{
-    text-align: center;
-    margin: 0 30px 0 30px;
-}
 .activites h3{
+    text-align: center;
     padding-bottom: 20px;
     font-size: 20px;
 }
 .activites p{
+    text-align: center;
     color: grey;
     line-height: 1.8em;
+    margin: 0 30px 0 30px;
 }
 footer{
     display: grid;
@@ -84,4 +85,12 @@ footer{
 .newsletterTitles h3, p{
     text-align: left;
     margin: 0;
+}
+.sociallogos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sociallogos div {
+    margin: 0 20px 0 20px;
 }
