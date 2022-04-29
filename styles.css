@@ -10,13 +10,16 @@
     align-items: center;
     margin-top: 20px;
     padding: 10px;
-    font-size: 26px;
+    font-size: 24px;
+}
+.navigation li{
+    padding: 15px;
 }
 ul div{
     text-align: center;
 }
 ul img{
-    width: 30%;
+    width: 40%;
 }
 .redban{
     background-color: rgb(211, 45, 42);
@@ -39,10 +42,46 @@ ul img{
 }
 .photoaccueil{
     display: flex;
-    justify-content: center;
-    width: 100%;
+}
+.photoaccueil div {
+    width: 50%;
 }
 .photoaccueil img {
-    margin: 0 10px 0 10px;
+    min-width: 100%;
+    min-height: 100%;
 }
-
+#nosactivites{
+    margin: 30px;
+    text-align: center;
+    color: rgb(211, 45, 42);
+    font-size: 32px;
+}
+.activites{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-bottom: 30px;
+}
+.activites h3, p{
+    text-align: center;
+    margin: 0 30px 0 30px;
+}
+.activites h3{
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+.activites p{
+    color: grey;
+    line-height: 1.8em;
+}
+footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 200px;
+    padding: 30px;
+    background-color: rgb(24, 24, 24);
+    color: white;
+}
+.newsletterTitles h3, p{
+    text-align: left;
+    margin: 0;
+}
