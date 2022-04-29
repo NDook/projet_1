@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+.navigation ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 26px;
+}
+ul div{
+    text-align: center;
+}
+ul img{
+    width: 30%;
+}
+.redban{
+    background-color: rgb(211, 45, 42);
+    height: 30%;
+    padding: 50px 0 50px 0;
+}
+.title {
+    color: white;
+    font-size: 32px;;
+    text-align: center;
+}
+.title p {
+    font-size: 26px;
+    filter: blur(1px);
+}
+.logomarketing{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 120px;
+}
+.photoaccueil{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.photoaccueil img {
+    margin: 0 10px 0 10px;
+}
+
