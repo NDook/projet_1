@@ -7,6 +7,7 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+/*barre de navigation*/
 .navigation ul {
     display: flex;
     justify-content: space-around;
@@ -17,7 +18,11 @@ body {
     height: 120px;
 }
 .navigation li{
+    font-weight:bold;
     padding: 15px;
+}
+#redtitle{
+    color: rgb(211, 45, 42);
 }
 ul div{
     text-align: center;
@@ -25,6 +30,7 @@ ul div{
 ul img{
     width: 40%;
 }
+/*bandeau rouge*/
 .redban{
     background-color: rgb(211, 45, 42);
     height: 30%;
@@ -45,6 +51,10 @@ ul img{
     justify-content: space-around;
     margin-top: 120px;
 }
+.logomarketing img{ /* ----- réimporter les png à la bonne taille pour supp le redimensionnement----- */
+    width: 110%;
+}
+/*photos de milieu de page*/
 .photoaccueil{
     display: flex;
 }
@@ -54,7 +64,10 @@ ul img{
 .photoaccueil img {
     min-width: 100%;
     min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
+/*cadre activités proposées*/
 #nosactivites{
     margin: 30px;
     text-align: center;
@@ -77,6 +90,7 @@ ul img{
     line-height: 1.8em;
     margin: 0 30px 0 30px;
 }
+/*footer*/
 footer{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -85,9 +99,40 @@ footer{
     background-color: rgb(24, 24, 24);
     color: white;
 }
+footer ul{
+    font-weight: bold;
+}
+footer li{
+    margin-bottom: 15px;
+}
 .newsletterTitles h3, p{
     text-align: left;
+    margin-bottom: 15px;
+
+}
+.newsletterTitles h3{
+    font-size: 26px;
+}
+.newsletterTitles p{
+    color: grey;
+}
+.email{
+    width: 40%;
+    border-style: none;
     margin: 0;
+    padding-left: 15px;
+    color: lightgray;
+    height: 45px;
+    border-radius: 30px 0 0 30px;
+}
+.submit{
+    width: 40%;
+    margin: -20px;
+    height: 45px;
+    border-radius: 30px;
+    border-style: none;
+    background-color: rgb(211, 45, 42);
+    color: white;
 }
 .sociallogos {
     display: flex;
