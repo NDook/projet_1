@@ -157,3 +157,25 @@ input:focus{
 .sociallogos div {
     margin: 0 20px 0 20px;
 }
+
+/*SECTION RESPONSIVE*/
+@media screen and (max-width: 875px) {
+    .navigation{
+        display: none;
+    }
+    .photoaccueil{
+        display: block;
+        width: 100%;
+    }
+    .photoaccueil div{   
+        margin: auto;
+        width: 100%;
+    }
+    .activites{
+        display: block;
+    }
+    .activites p{
+        padding-bottom: 50px;
+    }
+    
+}
