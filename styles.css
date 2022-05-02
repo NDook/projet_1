@@ -148,6 +148,8 @@ input:focus{
     background-color: rgb(211, 45, 42);
     color: white;
     cursor: pointer;
+    font-weight: 600;
+    padding-left: 40px;
 }
 .sociallogos {
     display: flex;
