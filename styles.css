@@ -57,7 +57,12 @@ ul img{
 .logomarketing{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 120px;
+    padding: 5px 5px;
+}
+.logomarketing div{
+    margin: 5px;
 }
 .logomarketing img{ /* ----- réimporter les png à la bonne taille pour supp le redimensionnement----- */
     width: 110%;
@@ -161,7 +166,7 @@ input:focus{
 }
 
 /*SECTION RESPONSIVE*/
-@media screen and (max-width: 875px) {
+@media screen and (max-width: 950px) {
     .navigation{
         display: none;
     }
@@ -179,5 +184,28 @@ input:focus{
     .activites p{
         padding-bottom: 50px;
     }
-    
+    footer{
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+    }
+    footer ul{
+        display: none;
+    }
+    .sociallogos{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .sociallogos div img {
+        width: 70%;
+    }
+    .email, .submit{
+        width: 60%;
+        padding-left: 15px;
+        font-size: 12px;
+    }
 }
+/*@media screen and (max-width: 500px){
+    .logomarketing{
+        flex-wrap: wrap;
+    }
+}*/
