@@ -7,6 +7,10 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+/*initialiser la couleur des ancres -----------  pb à regler*/
+a {
+    color:inherit;;
+}
 /*barre de navigation*/
 .navigation ul {
     display: flex;
@@ -48,6 +52,7 @@ ul img{
 }
 .title p:hover{
     filter: none;
+    transition: 2s;
 }
 .logomarketing{
     display: flex;
@@ -142,6 +147,7 @@ input:focus{
     border-style: none;
     background-color: rgb(211, 45, 42);
     color: white;
+    cursor: pointer;
 }
 .sociallogos {
     display: flex;
