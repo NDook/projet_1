@@ -152,6 +152,7 @@ input:focus{
     border-style: none;
     background-color: rgb(211, 45, 42);
     color: white;
+    font-style: italic;
     cursor: pointer;
     font-weight: 600;
     padding-left: 40px;
