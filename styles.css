@@ -7,24 +7,34 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+/*initialiser la couleur des ancres -----------  pb à regler*/
+a {
+    color:inherit;;
+}
+/*barre de navigation*/
 .navigation ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 20px;
     padding: 10px;
-    font-size: 24px;
+    font-size: 22px;
     height: 120px;
 }
 .navigation li{
+    font-weight:bold;
     padding: 15px;
+}
+#redtitle{
+    color: rgb(211, 45, 42);
 }
 ul div{
     text-align: center;
 }
 ul img{
-    width: 40%;
+    width: 100%;
 }
+/*bandeau rouge*/
 .redban{
     background-color: rgb(211, 45, 42);
     height: 30%;
@@ -40,11 +50,24 @@ ul img{
     font-size: 26px;
     filter: blur(1px);
 }
+.title p:hover{
+    filter: none;
+    transition: 2s;
+}
 .logomarketing{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 120px;
+    padding: 5px 5px;
 }
+.logomarketing div{
+    margin: 5px;
+}
+.logomarketing img{ /* ----- réimporter les png à la bonne taille pour supp le redimensionnement----- */
+    width: 110%;
+}
+/*photos de milieu de page*/
 .photoaccueil{
     display: flex;
 }
@@ -54,7 +77,14 @@ ul img{
 .photoaccueil img {
     min-width: 100%;
     min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
+/*.photoaccueil:hover{
+    -webkit-filter: grayscale(100%); /* Pour les navigateurs Chrome, Safari, Opera 
+    filter: grayscale(100%); /* Firefox 
+}*/
+/*cadre activités proposées*/
 #nosactivites{
     margin: 30px;
     text-align: center;
@@ -77,17 +107,54 @@ ul img{
     line-height: 1.8em;
     margin: 0 30px 0 30px;
 }
+/*footer*/
 footer{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     height: 200px;
-    padding: 30px;
+    padding: 20px;
     background-color: rgb(24, 24, 24);
     color: white;
 }
+footer ul{
+    font-weight: bold;
+}
+footer li{
+    margin-bottom: 15px;
+}
 .newsletterTitles h3, p{
     text-align: left;
+    margin-bottom: 15px;
+
+}
+.newsletterTitles h3{
+    font-size: 26px;
+}
+.newsletterTitles p{
+    color: grey;
+}
+input:focus{
+    outline: none;
+}
+.email{
+    width: 40%;
+    border-style: none;
     margin: 0;
+    padding-left: 15px;
+    height: 45px;
+    border-radius: 30px 0 0 30px;
+}
+.submit{
+    width: 40%;
+    margin: -30px;
+    height: 45px;
+    border-radius: 30px;
+    border-style: none;
+    background-color: rgb(211, 45, 42);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    padding-left: 40px;
 }
 .sociallogos {
     display: flex;
@@ -97,3 +164,48 @@ footer{
 .sociallogos div {
     margin: 0 20px 0 20px;
 }
+
+/*SECTION RESPONSIVE*/
+@media screen and (max-width: 950px) {
+    .navigation{
+        display: none;
+    }
+    .photoaccueil{
+        display: block;
+        width: 100%;
+    }
+    .photoaccueil div{   
+        margin: auto;
+        width: 100%;
+    }
+    .activites{
+        display: block;
+    }
+    .activites p{
+        padding-bottom: 50px;
+    }
+    footer{
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+    }
+    footer ul{
+        display: none;
+    }
+    .sociallogos{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .sociallogos div img {
+        width: 70%;
+    }
+    .email, .submit{
+        width: 60%;
+        padding-left: 15px;
+        font-size: 12px;
+    }
+}
+/*@media screen and (max-width: 500px){
+    .logomarketing{
+        flex-wrap: wrap;
+    }
+}*/
