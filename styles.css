@@ -262,7 +262,7 @@ input:focus{
         width: 70%;
     }
     .email, .submit{
-        width: 60%;
+        width: 50%;
         padding-left: 15px;
         font-size: 12px;
     }
