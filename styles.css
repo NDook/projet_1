@@ -9,7 +9,7 @@ body {
 }
 /*initialiser la couleur des ancres -----------  pb à regler*/
 a {
-    color:inherit;;
+    color:inherit;
 }
 /*barre de navigation*/
 .navigation ul {
@@ -263,7 +263,24 @@ input:focus{
     text-align: center;
     margin-bottom: 20px;
 }
-
+/*Page TARIFS*/
+.tarifs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 30px;
+}
+.tarif {
+    border-right: lightgray 1px solid;
+}
+.tarif-border {
+    border-bottom: lightgrey 1px solid;
+}
+.tarifs h2, p {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 50px 0 50px;
+}
 
 
 
