@@ -396,6 +396,14 @@ input:focus{
         padding-left: 15px;
         font-size: 12px;
     }
+    /*CONTACT*/
+    .contact{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .contactform {
+        min-width: 100%;
+    }
 }
 @media screen and (max-width: 1350px){
     .activitesP2{
