@@ -26,6 +26,12 @@ a {
     font-weight:bold;
     padding: 15px;
 }
+/*test hover menu
+.navigation a:hover {
+    background: rgb(211, 45, 42, 0.8);
+    transition: 2s;
+}
+fin test hover menu*/
 #redtitle{
     color: rgb(211, 45, 42);
 }
@@ -186,6 +192,7 @@ input:focus{
 }
 .introduction p {
     line-height: 1.2em;
+    text-align: justify;
 }
 .activitesP2{
     display: grid;
@@ -202,7 +209,7 @@ input:focus{
     color: grey;
     line-height: 1.5em;
     margin: 0 30px 0 30px;
-    padding: 0 15px 0 15px;
+    padding: 0 20px 0 20px;
 }
 .activitesP2 div {
     margin: auto;
@@ -221,7 +228,41 @@ input:focus{
     text-align: left;
     margin-left: 45px;
 }
-
+/*Page NOS COACHS*/
+.tilep3{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: rgb(211, 45, 42);
+    height: 30%;
+    padding: 50px;
+}
+/*.tilep3 h2 {
+    text-align: left;
+}*/
+.box-present {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 30px;
+}
+.box-present p {
+    padding: 50px;
+    text-align: justify;
+}
+.box-present span {
+    font-weight: 700;
+}
+.coachs {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.coach {
+    margin: 10px;
+}
+.coach h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 
 
@@ -267,8 +308,17 @@ input:focus{
         font-size: 12px;
     }
 }
-/*@media screen and (max-width: 500px){
-    .logomarketing{
-        flex-wrap: wrap;
+@media screen and (max-width: 1350px){
+    .activitesP2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-}*/
+    .activitesP2 div {
+        margin: 1em 0 1em 0;
+    }
+    .activitesP2 img {
+        width: 100%;
+    }
+    
+}
