@@ -8,7 +8,27 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-/*initialiser la couleur des ancres -----------  pb à regler*/
+.mouse-cursor { /*test sur mouse cursor ( faire un JS de suivi qui agit sur top et left*/
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	top: 50%;
+	left: 50%;
+	margin: -60px 0 0 -60px;
+	background:rgb(255, 255, 255);
+	border-radius: 80%;
+	backface-visibility: hidden;
+	opacity: 0.1;
+	pointer-events: none;
+	z-index: 1;
+	box-shadow: 0 2px 30px rgba(#000, 0.1);
+	transform: scale(0.2);
+
+	/*.touchevents & {
+		display: none;
+	}*/
+}
+/*initialiser la couleur des a*/
 a {
     color:inherit;
 }
