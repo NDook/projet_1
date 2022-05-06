@@ -348,14 +348,15 @@ input:focus{
     padding-top: 10px;
 }
 .submit-button{
-    padding-left: 5em;
+    /*padding-left: 5em;*/
     min-width: 100%;
     min-height: 100%;
     max-width: 100%;
     max-height: 100%;
+    text-align: center;
 }
 #submit{
-    width: 35%;
+    width: 50%;
     height: 40px;
     padding: 0;
     border-radius: 30px;
@@ -364,13 +365,15 @@ input:focus{
     font-weight: 900;
     font-style: italic;
     cursor: pointer;
+    
 }
 #submit:hover{
     background-color: rgb(211, 45, 42, 0.8);
 }
+
 .mandatory {
-    padding-left: 6em;
-    display: block;
+    /*padding-left: 6em;*/
+    text-align: center;
     font-size: 12px;
     color: grey;
 }
@@ -420,11 +423,15 @@ input:focus{
     .contact{
         display: flex;
         flex-direction: column-reverse;
+
     }
     .contactform {
-        min-width: 100%;
+        min-width: 80%;
     }
-}
+    .submit-button input {
+        min-width: 50%;
+    }
+}   
 @media screen and (max-width: 1350px){
     .activitesP2{
         display: flex;
@@ -437,13 +444,13 @@ input:focus{
     .activitesP2 img {
         width: 100%;
     }
-    @media screen and (max-width: 1160px){
+}
+@media screen and (max-width: 1160px){
     .contactform div {
         display: block;
     }
     .contactform label {
         margin: 20px;
     }
-    }
     
-}
+}   
