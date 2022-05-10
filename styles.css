@@ -66,61 +66,20 @@ a {
   .navigation a:hover::after {
     transform: translateX(-50%) scaleX(1);
   }
-  /*hover menu droite*/
-  #rightMenu {
-    position: relative;
-    font-weight: bold;
-    margin: 10px;
-    padding: 10px;
-  }
-  #rightMenu::after {
-    position: absolute;
-    content: "";
-    left: 50%;
-    bottom: 0;
-    transform: translateX(0) scaleX(0);
-    width: 100%;
-    height: 2px;
-    background-color: rgb(211, 45, 42, 0.9);
-    transition: transform 500ms;
-  }
-  #rightMenu:hover::after {
-    transform: translateX(-50%) scaleX(1);
-  }
+#redtitle{
+    color: rgb(211, 45, 42);
+}
+/*hover menu droite*/
+#rightMenu::after {
+transform: translateX(0) scaleX(0);
+}
+#rightMenu:hover::after {
+transform: translateX(-50%) scaleX(1);
+}
 /*Menu BURGER*/
 /* Sidenav menu */
 .sidenav, #openBtn {
     display:none;
-}
-
-/*.parallelogramme {
-    /*display: none;
-    width  : 100px;
-  height : 0;
-  border-top  : 35px solid rgb(211, 45, 42);
-  border-left : 20px solid transparent;
-  position : relative;
-}
-.parallelogramme:after {
-  width  : 0;
-  height : 0;
-  content: '';
-  border-bottom : 35px solid rgb(211, 45, 42);
-  border-right  : 20px solid transparent;
-  border-left   : 25px solid transparent;
-  position : absolute;
-  top  : -35px;
-  right: -20px;
-}*/
-/*fin test*/  
-#redtitle{
-    color: rgb(211, 45, 42);
-}
-ul div{
-    text-align: center;
-}
-ul img{
-    width: 100%;
 }
 /*bandeau rouge*/
 .redban{
@@ -310,6 +269,9 @@ input:focus{
     text-align: left;
 }
 /*Page NOS COACHS*/
+.subtitle-responsive{
+    display: none;
+}
 .tilep3{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -447,6 +409,12 @@ input:focus{
         display: block;
         width: 100%;
     }
+    #texttiltle{
+        margin: 5px 10px 5px 10px;
+    }
+    .logomarketing{
+        display: none;
+    }
     .photoaccueil div{   
         margin: auto;
         width: 100%;
@@ -482,15 +450,15 @@ input:focus{
     /*Menu Burger*/
     .sidenav {
         display:block;
-        height: 50%;
+        height: 35%;
         width: 100%;
         position: fixed;
         z-index: 1;
         top: -1000px;
-        left: 0px;
         background-color: #ffffff;
-        opacity: 98%;
-        padding-top: 60px;
+        border-bottom: lightgray 1px solid;
+        opacity: 99%;
+        padding-top: 30px;
         transition: top 0.5s ease;
     }
     #openBtn {
@@ -514,15 +482,11 @@ input:focus{
     }   
     /* Sidenav menu links */
     .sidenav a {
+        display: block;
         padding: 8px 8px 8px 32px;
         font-size: 25px;
-        color: #818181;
-        display: block;
+        color: rgb(129, 129, 129);
         transition: 0.3s;
-    }
-    
-    .sidenav a:hover {
-        color: rgb(24, 24, 24);
     }
     
     /* Active class */
@@ -535,7 +499,8 @@ input:focus{
         position: absolute;
         top: 0;
         right: 25px;
-        font-size: 36px;
+        font-size: 60px;
+        color: rgb(129, 129, 129);
     }
     .burger-icon span {
         display: block;
@@ -559,6 +524,17 @@ input:focus{
     /*COACHS*/
     .box-present{
         display: block;
+    }
+    .box-present p{
+        padding: 0 0 30px 0;
+    }
+    .tilep3 h2 {
+        display: none;
+    }
+    .subtitle-responsive{
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
     }
     /*TARIFS*/
     .tarifs {

@@ -1,4 +1,21 @@
 console.log("connecté");
+/*Menu Burger*/
+var sidenav = document.getElementById("mySidenav");
+var openBtn = document.getElementById("openBtn");
+var closeBtn = document.getElementById("closeBtn");
+
+openBtn.onclick = openNav;
+closeBtn.onclick = closeNav;
+
+/* Set the width of the top navigation */
+function openNav() {
+  sidenav.classList.add("active");
+}
+
+/* Set the width of the top navigation to 0 */
+function closeNav() {
+  sidenav.classList.remove("active");
+}
 /*mouse-cursor effect*/
 document.body.addEventListener("mousemove", function(event){
     const mouseCursor = document.querySelector(".mouse-cursor");
@@ -12,23 +29,7 @@ document.addEventListener("submit", function(event){
     const newsletter = document.querySelector("#inscription");    
     newsletter.value = "Merci ! tu es inscrit.";   
 });
-/*Menu Burger*/
-var sidenav = document.getElementById("mySidenav");
-var openBtn = document.getElementById("openBtn");
-var closeBtn = document.getElementById("closeBtn");
 
-openBtn.onclick = openNav;
-closeBtn.onclick = closeNav;
-
-/* Set the width of the side navigation to 250px */
-function openNav() {
-  sidenav.classList.add("active");
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  sidenav.classList.remove("active");
-}
 
 
 
