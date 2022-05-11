@@ -85,7 +85,6 @@ newsButton.addEventListener("click", function(event){
 
 
 
-
 /* effet interval "Blur" sur Tilte Page 1 (ko)
 const titletext = document.querySelector("#texttiltle");
 console.log(titletext.style);
