@@ -22,14 +22,61 @@ document.body.addEventListener("mousemove", function(event){
     mouseCursor.style.display = "block";
     mouseCursor.style.top = (event.layerY) + "px";
     mouseCursor.style.left = (event.layerX) + "px";   
-});
-/*newletter inscription*/
-document.addEventListener("submit", function(event){ 
-    event.preventDefault();  
-    const newsletter = document.querySelector("#inscription");    
-    newsletter.value = "Merci ! tu es inscrit.";   
-});
+})
 
+/*newletter inscription*/
+const newsletterSection = document.querySelector(".newsletter")
+newsletterSection.addEventListener("submit", function(event){ 
+  event.preventDefault();  
+  const newsletter = document.querySelector("#inscription");    
+  newsletter.value = "Merci ! tu es inscrit.";   
+})
+function activeForm(){
+  const msgAfterDelete = document.querySelector(".msgAfter");
+  msgAfterDelete.style.display = "none";
+  const submitForm = document.querySelector(".spendMessage");
+  submitForm.style.display = "block";
+}
+function msgTempAfter(){
+  const formDelete = document.querySelector(".contactform");
+  formDelete.style.display = "none";
+  const msgAfter = document.querySelector(".msgAfter");
+  msgAfter.style.display = "block";
+  setTimeout(activeForm, 3000);
+}
+
+
+/*FORMULAIRE*/
+const submitButton = document.querySelector(".contactform");
+submitButton.addEventListener("submit", function(clickOnSub) {
+  clickOnSub.preventDefault();
+  msgTempAfter();  
+})
+
+
+
+
+
+/*newletter inscription   SAVE
+document.addEventListener("submit", function(event){ 
+  event.preventDefault();  
+  const newsletter = document.querySelector("#inscription");    
+  newsletter.value = "Merci ! tu es inscrit.";   
+});*/
+/*newletter inscription
+const newsButton = document.querySelector("#inscription");
+newsButton.addEventListener("click", function(event){ 
+    event.preventDefault();
+    const email = document.querySelector("#email");
+    const newsletter = document.querySelector("#inscription");
+    if(email.value == "")  {
+      newsletter.value = "Renseigne ton email."; 
+    }
+    else {
+      newletter.value = "Merci ! tu es inscrit."
+    }
+      
+});*/
 
 
 

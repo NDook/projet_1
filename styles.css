@@ -386,12 +386,34 @@ input:focus{
     color: white;
     font-weight: 900;
     font-style: italic;
-    cursor: pointer;
-    
+    cursor: pointer;  
 }
 #submit:hover{
     background-color: rgb(211, 45, 42, 0.8);
 }
+.msgAfter{
+    display: none;
+    width: 10em;
+    margin: 30px;
+    color: rgb(211, 45, 42);
+    font-weight: 600;
+    font-size: 24px;
+    font-style: italic;
+}
+.msgAfter:after {
+    display: inline-block;
+    animation: loading steps(1,start) 1s infinite;
+    content: "";
+}
+
+  @keyframes loading {
+      0%   { content: ""; }
+      25%  { content: "."; }
+      50%  { content: ".."; }
+      75%  { content: "..."; }
+      100% { content: ""; }
+  }
+
 
 .mandatory {
     /*padding-left: 6em;*/
@@ -399,7 +421,29 @@ input:focus{
     font-size: 12px;
     color: grey;
 }
+.spendMessage {
+    display:none;
+    margin: 30px;
+}
+.spendMessage h2 {
+    text-align: center;
+    margin-bottom: 45px;
+    color: rgb(211, 45, 42);
+}
+.tempPageSpan {
+    display: block;
 
+	width: 120px;
+	height: 120px;
+	top: 50%;
+	left: 50%;
+	margin: -60px 0 0 -60px;
+	background:rgb(211, 45, 42);
+	border-radius: 80%;
+	transform: scale(0.2);
+    translate: 30px;
+    transition-delay: 1s;
+}
 
 
 
@@ -536,6 +580,9 @@ input:focus{
         text-align: center;
         margin-bottom: 30px;
     }
+    .spendMessage{
+        text-align: center;
+    }
     /*TARIFS*/
     .tarifs {
         display: block;
@@ -551,8 +598,6 @@ input:focus{
     .introduction h3{
         margin-top: 25px;
     }
-    
-    
 }   
 @media screen and (max-width: 1350px){
     .activitesP2{
@@ -568,9 +613,12 @@ input:focus{
         width: 100%;
     }
     .activitesP2 p{
-        text-align: justify;
+        text-align: center;
         margin: 0;
         padding: 0;
+    }
+    .wodgym h3{
+        text-align: center;
     }
 }
 @media screen and (max-width: 1160px){
