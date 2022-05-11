@@ -9,23 +9,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" />
 </head>
 <body>
+    <div class="mouse-cursor"></div> <!--souris JS-->
+    <!--Menu Desktop-->
     <nav class="navigation">
         <ul>
-            <li><a href="/index.html">ACCUEIL</a></li>
+            <li><a href="/index.html">ACCUEIL</a></li>            
             <li><a href="/activites.html">ACTIVITES</a></li>
             <li><a href="/coachs.html">NOS COACHS</a></li>
             <li><img src="assets/img/logo-site-bannière-2.png" alt="logosite"></li>
-            <li><a href="/tarifs.html">TARIFS</a></li>
-            <li><a href="/contact.html">CONTACT</a></li>
-            <li id="redtitle">OFFRE SPECIAL: <br>1er MOIS OFFERT</li>
+            <li><a id="rightMenu" href="/tarifs.html">TARIFS</a></li>
+            <li><a id="rightMenu" href="/contact.html">CONTACT</a></li>
+            <li id="redtitle">OFFRE SPECIALE: <br>1er MOIS OFFERT</li>
         </ul>
     </nav>
+    <!-- Menu Burger-->
+    <div id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">&times;</a>
+        <ul>
+          <li><a href="/index.html">ACCUEIL</a></li>
+          <li><a href="/activites.html">ACTIVITES</a></li>
+          <li><a href="/coachs.html">NOS COACHS</a></li>
+          <li><a href="/tarifs.html">TARIFS</a></li>
+          <li><a href="/contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <a href="#" id="openBtn">
+        <div><h3 class ="title_burger">ACCUEIL</h2></div>
+        <div><img src="assets/img/logo-site-bannière-2.png" alt="logosite"></div>
+        <div class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
     <section class="redban">
         <div class="title">
             <h1>CROSSFIT TEAM HERO</h1>
-            <p>Devenez une meilleure version de vous-même !</p>
+            <p id="texttiltle">Devenez une meilleure version de vous-même !</p>
         </div>
         <div class="logomarketing">
             <div><img src="assets/img/sansengagement.png" alt="logoengagement"></div>
@@ -38,7 +61,7 @@
         <div><img src="assets/img/photgauchesalle.png" alt="photsalle"></div>
         <div><img src="assets/img/photodroitesalle.png" alt="crossfiteurs"></div>
     </section>
-    <h2 id="nosactivites">NOS ACTIVITES</h2>
+    <h2 class="nosactivites"><a href="/activites.html">ACTIVITES</a></h2>
     <section class="activites">
         <div>
             <h3>WOD</h3>
@@ -82,16 +105,17 @@
             <h3>Newsletter</h3>
             <p>Astuces, conseils, nutrition, évènements… <br>
             Inscrivez-vous pour recevoir notre newsletter fitness chaque mois.</p>
-            <div class="newsletter">
-                <input class="email" type="text" name="email" placeholder="Votre email" id="email">
-                <input class="submit" type="submit" name="inscription" value="Je m'inscris         >" id="inscription">
-            </div>
+            <form class="newsletter">
+                <input class="email" type="text" name="email" placeholder="Votre email" id="email" required>
+                <input class="submit" type="submit" name="submit" value="Je m'inscris" id="inscription">
+            </form>
         </div>
         <div class="sociallogos">
             <div><a href="https://fr-fr.facebook.com/" target="blank"><img src="assets/img/facebook.png" alt="logo facebook"></a></div>
             <div><a href="https://www.instagram.com/?hl=fr" target="blank"><img src="assets/img/instagram.png" alt="logo instagram"></a></div>
             <div><a href="https://www.youtube.com/?hl=fr&gl=FR" target="blank"><img src="assets/img/youtube.png" alt="logo youtube"></a></div>
         </div>
-    </footer>    
+    </footer>
+    <script src="/scripts.js"></script>    
 </body>
 </html>

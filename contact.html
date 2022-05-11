@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossfit Team Hero</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" />
+</head>
+<body>
+    <div class="mouse-cursor"></div> <!--souris JS-->
+    <nav class="navigation">
+        <ul>
+            <li><a href="/index.html">ACCUEIL</a></li>
+            <li><a href="/activites.html">ACTIVITES</a></li>
+            <li><a href="/coachs.html">NOS COACHS</a></li>
+            <li><img src="assets/img/logo-site-bannière-2.png" alt="logosite"></li>
+            <li><a id="rightMenu" href="/tarifs.html">TARIFS</a></li>
+            <li><a id="rightMenu" href="/contact.html">CONTACT</a></li>
+            <li id="redtitle">OFFRE SPECIALE: <br>1er MOIS OFFERT</li>
+        </ul>
+    </nav>
+    <!-- Menu Burger-->
+    <div id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">&times;</a>
+        <ul>
+          <li><a href="/index.html">ACCUEIL</a></li>
+          <li><a href="/activites.html">ACTIVITES</a></li>
+          <li><a href="/coachs.html">NOS COACHS</a></li>
+          <li><a href="/tarifs.html">TARIFS</a></li>
+          <li><a href="/contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <a href="#" id="openBtn">
+        <div><h3 class ="title_burger">CONTACT</h2></div>
+        <div><img src="assets/img/logo-site-bannière-2.png" alt="logosite"></div>
+        <div class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+    <section class="redban">
+        <h2 class="subtitle">CONTACTEZ NOUS !</h2>
+    </section>
+    <section class="contact">
+        <div class="contact-image">
+            <div><img src="/assets/img/contact.jpg" alt="image contact"></div>
+            <p>- Crossfit Team Hero - <br>
+                20 avenue du warrior <br>
+                69480 POMMIERS <br>
+                06 02 13 12 11
+            </p>
+        </div>
+        <form class="contactform">
+            <div>
+                <label for="name">Nom:*</label>
+                <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                minlength="1"
+                maxlength="20"
+                />
+            </div>
+            <div>
+                <label for="firstname">Prénom:*</label>
+                <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                required
+                minlength="1"
+                maxlength="20"
+                />
+            </div>
+            <div>
+                <label for="email">Email:*</label>
+                <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                minlength="4"
+                maxlength="50"
+                />
+            </div>
+            <div>
+                <label for="phone">Téléphone:</label>
+                <input
+                type="tel"
+                id="phone"
+                name="phone"
+                />
+            </div>
+            <div>
+                <label for="message">Message:*</label>
+                <textarea id="message" name="message" required minlength="1"></textarea>
+            </div>
+            <div class="mandatory">
+                <div>*champs obligatoire</div>
+            </div>
+            <div class="submit-button">
+                <div><input type="submit" id="submit" name="submit" value="ENVOYER" /></div>
+            </div>      
+        </form>
+        <div class="msgAfter">Veuillez patienter</div> 
+        <div class="spendMessage">
+            <h2 class="titlespend">MESSAGE ENVOYE</h2>
+            <p>🔥 - La Team Crossfift Hero vous remercie et un coach va prendre contact avec vous dans les pLus bref délais. - 🔥</p>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="/index.html">Accueil</a></li>
+            <li><a href="/activites.html">Activités</a></li>
+            <li><a href="/coachs.html">Nos coachs</a></li>
+            <li><a href="/tarifs.html">Tarifs</a> </li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <div class="newsletterTitles">
+            <h3>Newsletter</h3>
+            <p>Astuces, conseils, nutrition, évènements… <br>
+            Inscrivez-vous pour recevoir notre newsletter fitness chaque mois.</p>
+                <input class="email" type="text" name="mail" placeholder="Votre email" id="email" required>
+                <input class="submit" type="submit" name="sub" value="Je m'inscris" id="inscription">
+            </form>
+        </div>
+        <div class="sociallogos">
+            <div><a href="https://fr-fr.facebook.com/" target="blank"><img src="assets/img/facebook.png" alt="logo facebook"></a></div>
+            <div><a href="https://www.instagram.com/?hl=fr" target="blank"><img src="assets/img/instagram.png" alt="logo instagram"></a></div>
+            <div><a href="https://www.youtube.com/?hl=fr&gl=FR" target="blank"><img src="assets/img/youtube.png" alt="logo youtube"></a></div>
+        </div>
+    </footer> 
+    <script src="/scripts.js"></script>    
+</body>
+</html>
