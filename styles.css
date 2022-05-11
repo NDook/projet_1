@@ -44,7 +44,7 @@ a {
     font-weight:bold;
     padding: 15px;
 }
-/*hover menu*/
+/*hover menu gauche*/
 .navigation a {
     position: relative;
     font-weight: bold;
@@ -56,47 +56,31 @@ a {
     content: "";
     left: 50%;
     bottom: 0;
-    transform: translateX(-100%) scaleX(0);
+    transform: translateX(-100%) scaleX(0); /* modifier la valeur translate pour changer la direction de l'effet*/
     width: 100%;
-    height: 2.5px;
-    border-radius: 0 30px 30px 0;
-    color: white;
+    height: 2px;
     background-color: rgb(211, 45, 42, 0.9);
     transition: transform 500ms;
-   }
+  }
+
   
   .navigation a:hover::after {
     transform: translateX(-50%) scaleX(1);
   }
-  
-/*.parallelogramme {
-    /*display: none;
-    width  : 100px;
-  height : 0;
-  border-top  : 35px solid rgb(211, 45, 42);
-  border-left : 20px solid transparent;
-  position : relative;
-}
-.parallelogramme:after {
-  width  : 0;
-  height : 0;
-  content: '';
-  border-bottom : 35px solid rgb(211, 45, 42);
-  border-right  : 20px solid transparent;
-  border-left   : 25px solid transparent;
-  position : absolute;
-  top  : -35px;
-  right: -20px;
-}*/
-/*fin test*/  
 #redtitle{
     color: rgb(211, 45, 42);
 }
-ul div{
-    text-align: center;
+/*hover menu droite*/
+#rightMenu::after {
+transform: translateX(0) scaleX(0);
 }
-ul img{
-    width: 100%;
+#rightMenu:hover::after {
+transform: translateX(-50%) scaleX(1);
+}
+/*Menu BURGER*/
+/* Sidenav menu */
+.sidenav, #openBtn {
+    display:none;
 }
 /*bandeau rouge*/
 .redban{
@@ -114,7 +98,7 @@ ul img{
     font-size: 26px;
     filter: blur(1px);
 }
-#texttiltle:hover{
+#texttiltle:hover{   
     filter: none;
     transition: 2s;
 }
@@ -286,6 +270,9 @@ input:focus{
     text-align: left;
 }
 /*Page NOS COACHS*/
+.subtitle-responsive{
+    display: none;
+}
 .tilep3{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -400,12 +387,34 @@ input:focus{
     color: white;
     font-weight: 900;
     font-style: italic;
-    cursor: pointer;
-    
+    cursor: pointer;  
 }
 #submit:hover{
     background-color: rgb(211, 45, 42, 0.8);
 }
+.msgAfter{
+    display: none;
+    width: 10em;
+    margin: 30px;
+    color: rgb(211, 45, 42);
+    font-weight: 600;
+    font-size: 24px;
+    font-style: italic;
+}
+.msgAfter:after {
+    display: inline-block;
+    animation: loading steps(1,start) 1s infinite;
+    content: "";
+}
+
+  @keyframes loading {
+      0%   { content: ""; }
+      25%  { content: "."; }
+      50%  { content: ".."; }
+      75%  { content: "..."; }
+      100% { content: ""; }
+  }
+
 
 .mandatory {
     /*padding-left: 6em;*/
@@ -413,21 +422,43 @@ input:focus{
     font-size: 12px;
     color: grey;
 }
+.spendMessage {
+    display:none;
+    margin: 30px;
+}
+.spendMessage h2 {
+    text-align: center;
+    margin-bottom: 45px;
+    color: rgb(211, 45, 42);
+}
+.tempPageSpan {
+    display: block;
 
+	width: 120px;
+	height: 120px;
+	top: 50%;
+	left: 50%;
+	margin: -60px 0 0 -60px;
+	background:rgb(211, 45, 42);
+	border-radius: 80%;
+	transform: scale(0.2);
+    translate: 30px;
+    transition-delay: 1s;
+}
 
 
 
 /*SECTION RESPONSIVE*/
 @media screen and (max-width: 950px) {
-    .mouse-cursor{
-        display: none;
-    }
-    .navigation{
-        display: none;
-    }
     .photoaccueil{
         display: block;
         width: 100%;
+    }
+    #texttiltle{
+        margin: 5px 10px 5px 10px;
+    }
+    .logomarketing{
+        display: none;
     }
     .photoaccueil div{   
         margin: auto;
@@ -458,17 +489,115 @@ input:focus{
         padding-left: 15px;
         font-size: 12px;
     }
+    .navigation ul {
+        display: none;
+    }
+    /*Menu Burger*/
+    .sidenav {
+        display:block;
+        height: 35%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: -1000px;
+        background-color: #ffffff;
+        border-bottom: lightgray 1px solid;
+        opacity: 99%;
+        padding-top: 30px;
+        transition: top 0.5s ease;
+    }
+    #openBtn {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px;
+    }
+    #openBtn div{
+        width: calc(100%/3);
+        text-align: center;
+    }
+    #openBtn img {
+        width: 50%;
+    }
+    #openBtn span {
+        margin-left: 60%;
+    }
+    .title_burger{
+       font-weight: 600;
+    }   
+    /* Sidenav menu links */
+    .sidenav a {
+        display: block;
+        padding: 8px 8px 8px 32px;
+        font-size: 25px;
+        color: rgb(129, 129, 129);
+        transition: 0.3s;
+    }
+    
+    /* Active class */
+    .sidenav.active {
+        top: 0;
+    }
+    
+    /* Close btn */
+    .sidenav .close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 60px;
+        color: rgb(129, 129, 129);
+    }
+    .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: rgb(24, 24, 24);
+        border-radius: 20px;
+        margin: 6px 0;
+    }
     /*CONTACT*/
     .contact{
         display: flex;
         flex-direction: column-reverse;
-
     }
     .contactform {
         min-width: 80%;
     }
     .submit-button input {
         min-width: 50%;
+    }
+    /*COACHS*/
+    .box-present{
+        display: block;
+    }
+    .box-present p{
+        padding: 0 0 30px 0;
+    }
+    .tilep3 h2 {
+        display: none;
+    }
+    .subtitle-responsive{
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .spendMessage{
+        text-align: center;
+    }
+    /*TARIFS*/
+    .tarifs {
+        display: block;
+    }
+    .tarif, .tarif-border{
+        border: none;
+    }
+    .tarif p, .tarif1 p {
+        text-align: center;
+        padding: 0;
+    }
+    /*ACITIVITES*/
+    .introduction h3{
+        margin-top: 25px;
     }
 }   
 @media screen and (max-width: 1350px){
@@ -479,9 +608,18 @@ input:focus{
     }
     .activitesP2 div {
         margin: 1em 0 1em 0;
+      
     }
     .activitesP2 img {
         width: 100%;
+    }
+    .activitesP2 p{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .wodgym h3{
+        text-align: center;
     }
 }
 @media screen and (max-width: 1160px){

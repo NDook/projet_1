@@ -19,11 +19,31 @@
             <li><a href="/activites.html">ACTIVITES</a></li>
             <li><a href="/coachs.html">NOS COACHS</a></li>
             <li><img src="assets/img/logo-site-bannière-2.png" alt="logosite"></li>
-            <li><a href="/tarifs.html">TARIFS</a></li>
-            <li><a href="/contact.html">CONTACT</a></li>
+            <li><a id="rightMenu" href="/tarifs.html">TARIFS</a></li>
+            <li><a id="rightMenu" href="/contact.html">CONTACT</a></li>
             <li id="redtitle">OFFRE SPECIALE: <br>1er MOIS OFFERT</li>
         </ul>
     </nav>
+    <!-- Menu Burger-->
+    <div id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">&times;</a>
+        <ul>
+          <li><a href="/index.html">ACCUEIL</a></li>
+          <li><a href="/activites.html">ACTIVITES</a></li>
+          <li><a href="/coachs.html">NOS COACHS</a></li>
+          <li><a href="/tarifs.html">TARIFS</a></li>
+          <li><a href="/contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <a href="#" id="openBtn">
+        <div><h3 class ="title_burger">CONTACT</h2></div>
+        <div><img src="assets/img/logo-site-bannière-2.png" alt="logosite"></div>
+        <div class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
     <section class="redban">
         <h2 class="subtitle">CONTACTEZ NOUS !</h2>
     </section>
@@ -86,9 +106,14 @@
                 <div>*champs obligatoire</div>
             </div>
             <div class="submit-button">
-                <div><input type="submit" id="submit" value="ENVOYER" /></div>
-            </div>       
+                <div><input type="submit" id="submit" name="submit" value="ENVOYER" /></div>
+            </div>      
         </form>
+        <div class="msgAfter">Veuillez patienter</div> 
+        <div class="spendMessage">
+            <h2 class="titlespend">MESSAGE ENVOYE</h2>
+            <p>🔥 - La Team Crossfift Hero vous remercie et un coach va prendre contact avec vous dans les pLus bref délais. - 🔥</p>
+        </div>
     </section>
     <footer>
         <ul>
@@ -102,9 +127,8 @@
             <h3>Newsletter</h3>
             <p>Astuces, conseils, nutrition, évènements… <br>
             Inscrivez-vous pour recevoir notre newsletter fitness chaque mois.</p>
-            <form class="newsletter">
-                <input class="email" type="text" name="email" placeholder="Votre email" id="email" required>
-                <input class="submit" type="submit" name="submit" value="Je m'inscris" id="inscription">
+                <input class="email" type="text" name="mail" placeholder="Votre email" id="email" required>
+                <input class="submit" type="submit" name="sub" value="Je m'inscris" id="inscription">
             </form>
         </div>
         <div class="sociallogos">
