@@ -1,7 +1,7 @@
 console.log("connecté");
 /*Menu Burger*/
 var sidenav = document.querySelector("#mySidenav");
-var openBtn = document.querySelector("#openBtn");
+var openBtn = document.querySelector(".burger-icon");
 var closeBtn = document.querySelector("#closeBtn");
 
 openBtn.onclick = openNav;
@@ -32,25 +32,7 @@ newsletterSection.addEventListener("submit", function(event){
   const newsletter = document.querySelector("#inscription");    
   newsletter.value = "Merci ! tu es inscrit.";   
 })
-/*FORMULAIRE*/
-function activeForm(){ /* desactiver section attente pour activer "message envoyé"*/
-  const msgAfterDelete = document.querySelector(".pointDiv");
-  msgAfterDelete.style.display = "none";
-  const submitForm = document.querySelector(".spendMessage");
-  submitForm.style.display = "block";
-}
-function msgTempAfter(){/* desactiver le formulaire pour activer "message envoyé" delai de 2s*/
-  const formDelete = document.querySelector(".contactform");
-  formDelete.style.display = "none";
-  const msgAfter = document.querySelector(".pointDiv");
-  msgAfter.style.display = "flex";
-  setTimeout(activeForm, 2000);
-}
-const submitButton = document.querySelector(".contactform"); /* action 1 lors de la soumission du formaulaire*/
-submitButton.addEventListener("submit", function(clickOnSub) {
-  clickOnSub.preventDefault();
-  msgTempAfter();  
-})
+
 
 
 

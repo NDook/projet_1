@@ -19,9 +19,9 @@
             <li><a href="/index.html">ACCUEIL</a></li>
             <li><a href="/activites.html">ACTIVITES</a></li>
             <li><a href="/coachs.html">NOS COACHS</a></li>
-            <li><img src="assets/img/logo-site-bannière-2.png" alt="logosite"></li>
-            <li><a id="rightMenu" href="/tarifs.html">TARIFS</a></li>
-            <li><a id="rightMenu" href="/contact.html">CONTACT</a></li>
+            <li><img src="assets/img/logo-site-banniere-2.png" alt="logosite"></li>
+            <li><a class="rightMenu" href="/tarifs.html">TARIFS</a></li>
+            <li><a class="rightMenu" href="/contact.html">CONTACT</a></li>
             <li id="redtitle">OFFRE SPECIALE: <br>1er MOIS OFFERT</li>
         </ul>
     </nav>
@@ -36,16 +36,16 @@
           <li><a href="/contact.html">CONTACT</a></li>
         </ul>
       </div>
-      <!-- Menu Burger -- barre de navigation-->
-      <a href="#" id="openBtn">
-        <div><h3 class ="title_burger">CONTACT</h2></div>
-        <div><img src="assets/img/logo-site-bannière-2.png" alt="logosite"></div>
+      <!-- Menu Burger  barre de navigation-->
+      <div id="openBtn">
+        <div><h3 class ="title_burger">CONTACT</h3></div>
+        <div><img src="assets/img/logo-site-banniere-2.png" alt="logosite"></div>
         <div class="burger-icon"> 
           <span></span>
           <span></span>
           <span></span>
         </div>
-      </a>
+    </div>
     <section class="redban">
         <h2 class="subtitle">CONTACTEZ NOUS !</h2>
     </section>
@@ -85,7 +85,7 @@
                 <label for="email">Email:*</label>
                 <input
                 type="email"
-                id="email"
+                id="emailform"
                 name="email"
                 required
                 minlength="4"
@@ -146,6 +146,7 @@
             <div><a href="https://www.youtube.com/?hl=fr&gl=FR" target="blank"><img src="assets/img/youtube.png" alt="logo youtube"></a></div>
         </div>
     </footer> 
-    <script src="/scripts.js"></script>    
+    <script src="/scripts.js"></script> 
+    <script src="/scripts_contact.js"></script>   
 </body>
 </html>

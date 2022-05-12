@@ -70,10 +70,10 @@ a {
     color: rgb(211, 45, 42);
 }
 /*hover menu droite*/
-#rightMenu::after {
+.rightMenu::after {
 transform: translateX(0) scaleX(0);
 }
-#rightMenu:hover::after {
+.rightMenu:hover::after {
 transform: translateX(-50%) scaleX(1);
 }
 /*Menu BURGER*/
@@ -538,10 +538,13 @@ input:focus{
     /* Close btn */
     .sidenav .close {
         position: absolute;
-        top: 0;
-        right: 25px;
+        top: 10%;
+        right: 10%;
         font-size: 60px;
         color: rgb(129, 129, 129);
+    }
+    .burger-icon{
+        cursor: pointer;
     }
     .burger-icon span {
         display: block;
@@ -566,6 +569,9 @@ input:focus{
     }
     .submit-button input {
         min-width: 50%;
+    }
+    .pointDiv {
+        margin: 50px 0 20px 0;
     }
     /*COACHS*/
     .box-present{
