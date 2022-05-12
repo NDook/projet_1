@@ -127,10 +127,6 @@ transform: translateX(-50%) scaleX(1);
     max-width: 100%;
     max-height: 100%;
 }
-/*.photoaccueil:hover{
-    -webkit-filter: grayscale(100%); /* Pour les navigateurs Chrome, Safari, Opera 
-    filter: grayscale(100%); /* Firefox 
-}*/
 /*cadre activités proposées*/
 .nosactivites{
     margin: 30px;
@@ -154,7 +150,7 @@ transform: translateX(-50%) scaleX(1);
     line-height: 1.8em;
     margin: 0 30px 0 30px;
 }
-/*footer*/
+/*-------------------footer-------------------*/
 footer{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -211,7 +207,7 @@ input:focus{
 .sociallogos div {
     margin: 0 20px 0 20px;
 }
-/*Page ACTIVITES*/
+/*-------------------Page ACTIVITES-------------------*/
 .subtitle {
     color: white;
     font-size: 20px;
@@ -268,7 +264,7 @@ input:focus{
 .wodgym h3 {
     text-align: left;
 }
-/*Page NOS COACHS*/
+/*-------------------NOS COACHS-------------------*/
 .subtitle-responsive{
     display: none;
 }
@@ -304,7 +300,7 @@ input:focus{
     text-align: center;
     margin-bottom: 20px;
 }
-/*Page TARIFS*/
+/*-------------------Page TARIFS-------------------*/
 .tarifs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -329,28 +325,32 @@ input:focus{
     text-align: center;
     margin-bottom: 30px;
 }
-/*Page CONTACT*/
-.contact {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 30px 0 30px 0;
+/*-------------------CONTACT-----------------------*/
+.contact { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2em 5em 2em 5em;
+}
+.contact-image{
+    align-self: center;
+    justify-self: center;
 }
 .contact-image p {
     text-align: center;
     margin-top: 15px;
     font-weight: 600;
 }
-.contactform {
-    width: 40%;
+.contactform {  /* Formulaire */
+    align-self: center;
+    justify-self: center;
+    width: 80%;
     min-width: 20%;
     margin-bottom: 30px;
 }
 .contactform div{
     display: flex;
     justify-content: center;
-    width: 70%;
-    margin: auto;
+    width: 80%;
 }
 .contactform label{
     padding-top: 20px;
@@ -370,7 +370,6 @@ input:focus{
     padding-top: 10px;
 }
 .submit-button{
-    /*padding-left: 5em;*/
     min-width: 100%;
     min-height: 100%;
     max-width: 100%;
@@ -391,30 +390,34 @@ input:focus{
 #submit:hover{
     background-color: rgb(211, 45, 42, 0.8);
 }
-.msgAfter{
+/*Element de transition à la soumission du formulaire - attente*/
+.pointDiv{
     display: none;
-    width: 10em;
-    margin: 30px;
-    color: rgb(211, 45, 42);
-    font-weight: 600;
-    font-size: 24px;
-    font-style: italic;
+    align-self: center;
+    justify-self: center;
 }
-.msgAfter:after {
-    display: inline-block;
-    animation: loading steps(1,start) 1s infinite;
-    content: "";
+.msgAfter, .msgAfter1, .msgAfter2 { 
+    margin: 8px;
+    background-color: rgb(211, 45, 42);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position:relative;
+    animation-name: ball;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
 }
-
-  @keyframes loading {
-      0%   { content: ""; }
-      25%  { content: "."; }
-      50%  { content: ".."; }
-      75%  { content: "..."; }
-      100% { content: ""; }
-  }
-
-
+.msgAfter1{
+    animation-delay: 0.1s;
+}
+.msgAfter2{
+    animation-delay: 0.2s;
+}
+@keyframes ball{
+    0%{ bottom:0px;}
+    50%{ bottom:50px;}
+    100%{ bottom:0px;}
+}
 .mandatory {
     /*padding-left: 6em;*/
     text-align: center;
@@ -423,6 +426,8 @@ input:focus{
 }
 .spendMessage {
     display:none;
+    align-self: center;
+    justify-self: center;
     margin: 30px;
 }
 .spendMessage h2 {
@@ -430,24 +435,16 @@ input:focus{
     margin-bottom: 45px;
     color: rgb(211, 45, 42);
 }
-.tempPageSpan {
-    display: block;
-
-	width: 120px;
-	height: 120px;
-	top: 50%;
-	left: 50%;
-	margin: -60px 0 0 -60px;
-	background:rgb(211, 45, 42);
-	border-radius: 80%;
-	transform: scale(0.2);
-    translate: 30px;
-    transition-delay: 1s;
+.spendMessage p {
+    text-align: center;
 }
 
+/***********************************************************************
+*                        SECTION RESPONSIVE                            *
+*                                                                      *
+*                                                                      *
+***********************************************************************/
 
-
-/*SECTION RESPONSIVE*/
 @media screen and (max-width: 950px) {
     .photoaccueil{
         display: block;
@@ -558,9 +555,14 @@ input:focus{
     .contact{
         display: flex;
         flex-direction: column-reverse;
+        justify-content: center;
+        margin: 1em 0 1em 0;
     }
     .contactform {
         min-width: 80%;
+    }
+    .contactform div {
+        margin: auto;
     }
     .submit-button input {
         min-width: 50%;

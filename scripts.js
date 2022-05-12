@@ -1,18 +1,18 @@
 console.log("connecté");
 /*Menu Burger*/
-var sidenav = document.getElementById("mySidenav");
-var openBtn = document.getElementById("openBtn");
-var closeBtn = document.getElementById("closeBtn");
+var sidenav = document.querySelector("#mySidenav");
+var openBtn = document.querySelector("#openBtn");
+var closeBtn = document.querySelector("#closeBtn");
 
 openBtn.onclick = openNav;
 closeBtn.onclick = closeNav;
 
-/* Set the width of the top navigation */
+/* Set the height of the top navigation */
 function openNav() {
   sidenav.classList.add("active");
 }
 
-/* Set the width of the top navigation to 0 */
+/* Set the height of the top navigation to 0 */
 function closeNav() {
   sidenav.classList.remove("active");
 }
@@ -25,29 +25,28 @@ document.body.addEventListener("mousemove", function(event){
 })
 
 /*newletter inscription*/
+/*---------bouton newsletter footer-----------*/
 const newsletterSection = document.querySelector(".newsletter")
 newsletterSection.addEventListener("submit", function(event){ 
   event.preventDefault();  
   const newsletter = document.querySelector("#inscription");    
   newsletter.value = "Merci ! tu es inscrit.";   
 })
-function activeForm(){
-  const msgAfterDelete = document.querySelector(".msgAfter");
+/*FORMULAIRE*/
+function activeForm(){ /* desactiver section attente pour activer "message envoyé"*/
+  const msgAfterDelete = document.querySelector(".pointDiv");
   msgAfterDelete.style.display = "none";
   const submitForm = document.querySelector(".spendMessage");
   submitForm.style.display = "block";
 }
-function msgTempAfter(){
+function msgTempAfter(){/* desactiver le formulaire pour activer "message envoyé" delai de 2s*/
   const formDelete = document.querySelector(".contactform");
   formDelete.style.display = "none";
-  const msgAfter = document.querySelector(".msgAfter");
-  msgAfter.style.display = "block";
-  setTimeout(activeForm, 3000);
+  const msgAfter = document.querySelector(".pointDiv");
+  msgAfter.style.display = "flex";
+  setTimeout(activeForm, 2000);
 }
-
-
-/*FORMULAIRE*/
-const submitButton = document.querySelector(".contactform");
+const submitButton = document.querySelector(".contactform"); /* action 1 lors de la soumission du formaulaire*/
 submitButton.addEventListener("submit", function(clickOnSub) {
   clickOnSub.preventDefault();
   msgTempAfter();  
