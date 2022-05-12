@@ -19,3 +19,11 @@ submitButton.addEventListener("submit", function(clickOnSub) {
   clickOnSub.preventDefault();
   msgTempAfter();  
 })
+/*Correction bug mouse-cursor lors du over sur le text area*/
+let textArea = document.querySelector("#message");
+  textArea.addEventListener("mouseover", function() {
+    mouseCursor.style.transform = "scale(0)";
+  })
+  textArea.addEventListener("mouseout", function(){
+    mouseCursor.style.transform = "scale(0.2)";
+})

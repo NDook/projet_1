@@ -17,24 +17,49 @@ function closeNav() {
   sidenav.classList.remove("active");
 }
 /*mouse-cursor effect*/
+
 document.body.addEventListener("mousemove", function(event){
-    const mouseCursor = document.querySelector(".mouse-cursor");
+    let mouseCursor = document.querySelector(".mouse-cursor");
     mouseCursor.style.display = "block";
     mouseCursor.style.top = (event.layerY) + "px";
     mouseCursor.style.left = (event.layerX) + "px";   
 })
 
-/*newletter inscription*/
+
+  /*newletter inscription*/
 /*---------bouton newsletter footer-----------*/
 const newsletterSection = document.querySelector(".newsletter")
 newsletterSection.addEventListener("submit", function(event){ 
   event.preventDefault();  
-  const newsletter = document.querySelector("#inscription");    
+  const newsletter = document.querySelector("#inscription"); 
+  const btnNewslet = document.querySelector(".submit")
+  const email = document.querySelector(".email");
+  email.style.transition = "1s";
+  btnNewslet.style.transition = "1s";
+  btnNewslet.style.width = "80%";
+  email.style.width = "0";
+
   newsletter.value = "Merci ! tu es inscrit.";   
 })
 
-
-
+/*Correction bug mouse-cursor lors du over sur les menu nav*/
+let navBar = document.querySelectorAll(".menu");
+let mouseCursor = document.querySelector(".mouse-cursor");
+for(i=0; i < navBar.length; i++) {
+  navBar[i].addEventListener("mouseover", function() {
+    mouseCursor.style.transform = "scale(0)";
+  })
+  navBar[i].addEventListener("mouseout", function(){
+    mouseCursor.style.transform = "scale(0.2)";
+})}
+/*Correction bug mouse-cursor lors du over sur le texttitle*/
+let redTitle = document.querySelector("#texttiltle");
+  redTitle.addEventListener("mouseover", function() {
+    mouseCursor.style.transform = "scale(0)";
+  })
+  redTitle.addEventListener("mouseout", function(){
+    mouseCursor.style.transform = "scale(0.2)";
+})
 
 
 

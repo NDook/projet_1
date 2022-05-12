@@ -8,24 +8,7 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-.mouse-cursor { 
-    display: none;
-	position: absolute;
-	width: 120px;
-	height: 120px;
-	top: 50%;
-	left: 50%;
-	margin: -60px 0 0 -60px;
-	background:rgb(222, 222, 222);
-	border-radius: 80%;
-	backface-visibility: hidden;
-	opacity: 0.1;
-	pointer-events: none;
-	z-index: 99;
-	box-shadow: 0 2px 30px rgba(#000, 0.1);
-	transform: scale(0.2);
-    transition: 0.1s;
-}
+
 /*initialiser la couleur des a*/
 a {
     color:inherit;
@@ -45,13 +28,13 @@ a {
     padding: 15px;
 }
 /*hover menu gauche*/
-.navigation a {
+.menuLeft {
     position: relative;
     font-weight: bold;
     margin: 10px;
     padding: 10px;
   }
-  .navigation a::after {
+  .menuLeft::after {
     position: absolute;
     content: "";
     left: 50%;
@@ -63,19 +46,35 @@ a {
     transition: transform 500ms;
   }
   
-  .navigation a:hover::after {
+  .menuLeft:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+/*hover menu droite*/
+.rightMenu {
+    position: relative;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+  }
+  .rightMenu::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 0;
+    transform: translateX(0%) scaleX(0); /* modifier la valeur translate pour changer la direction de l'effet*/
+    width: 100%;
+    height: 2px;
+    background-color: rgb(211, 45, 42, 0.9);
+    transition: transform 500ms;
+  }
+  
+  .rightMenu:hover::after {
     transform: translateX(-50%) scaleX(1);
   }
 #redtitle{
     color: rgb(211, 45, 42);
 }
-/*hover menu droite*/
-.rightMenu::after {
-transform: translateX(0) scaleX(0);
-}
-.rightMenu:hover::after {
-transform: translateX(-50%) scaleX(1);
-}
+
 /*Menu BURGER*/
 /* Sidenav menu */
 .sidenav, #openBtn {
@@ -101,6 +100,25 @@ transform: translateX(-50%) scaleX(1);
     filter: none;
     transition: 2s;
 }
+.imgcircul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+}
+.imgcircul h4{
+    color: rgb(211, 45, 42);
+    margin-bottom: 5px;
+}
+.imgcircul p {
+    color: grey;
+    font-size: 14px;
+}
 .logomarketing{
     display: flex;
     justify-content: space-around;
@@ -110,10 +128,8 @@ transform: translateX(-50%) scaleX(1);
 }
 .logomarketing div{
     margin: 5px;
-}
-.logomarketing img{ /* ----- réimporter les png à la bonne taille pour supp le redimensionnement----- */
-    width: 110%;
-}
+}/*
+
 /*photos de milieu de page*/
 .photoaccueil{
     display: flex;
@@ -437,6 +453,24 @@ input:focus{
 }
 .spendMessage p {
     text-align: center;
+}
+.mouse-cursor { 
+    display: none;
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	top: 50%;
+	left: 50%;
+	margin: -60px 0 0 -60px;
+	background:rgb(222, 222, 222);
+	border-radius: 80%;
+	backface-visibility:hidden;
+	opacity: 0.5;
+	pointer-events:none;
+	z-index: 7;
+	box-shadow: 0 2px 30px rgba(#000, 0.1);
+	transform: scale(0.2);
+    transition: 0.1s;
 }
 
 /***********************************************************************
