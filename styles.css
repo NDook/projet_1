@@ -465,12 +465,12 @@ input:focus{
 	background:rgb(222, 222, 222);
 	border-radius: 80%;
 	backface-visibility:hidden;
-	opacity: 0.5;
-	pointer-events:none;
+	opacity: 0.2;
+	pointer-events:none;    
 	z-index: 7;
 	box-shadow: 0 2px 30px rgba(#000, 0.1);
 	transform: scale(0.2);
-    transition: 0.1s;
+    transition: 0.06s;
 }
 
 /***********************************************************************
