@@ -45,14 +45,29 @@ newsletterSection.addEventListener("submit", function(event){
 /*Correction bug mouse-cursor lors du over sur les menu nav*/
 let navBar = document.querySelectorAll(".menu");
 let mouseCursor = document.querySelector(".mouse-cursor");
+
+function mouseUp(event) {event.addEventListener("mouseover", function() {
+  mouseCursor.style.transform = "scale(0)";
+})}
+function mouseDown(event) {event.addEventListener("mouseout", function() {
+  mouseCursor.style.transform = "scale(0.2)";
+})}
+function mouseUpDown (callback, array) {
+  array.forEach(event => callback(event));
+}
+mouseUpDown(mouseUp, navBar);
+mouseUpDown(mouseDown, navBar);
+
+
+/*
 for(i=0; i < navBar.length; i++) {
   navBar[i].addEventListener("mouseover", function() {
     mouseCursor.style.transform = "scale(0)";
   })
   navBar[i].addEventListener("mouseout", function(){
     mouseCursor.style.transform = "scale(0.2)";
-})}
-/*Correction bug mouse-cursor lors du over sur le texttitle*/
+})}*/
+/*Correction bug mouse-cursor lors du hover sur le texttitle*/
 let redTitle = document.querySelector("#texttiltle");
   redTitle.addEventListener("mouseover", function() {
     mouseCursor.style.transform = "scale(0)";
