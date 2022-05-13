@@ -45,6 +45,7 @@ a {
     background-color: rgb(211, 45, 42, 0.9);
     transition: transform 500ms;
   }
+
   
   .menuLeft:hover::after {
     transform: translateX(-50%) scaleX(1);
