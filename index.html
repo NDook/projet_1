@@ -12,16 +12,16 @@
     <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" />
 </head>
 <body>
-    <div class="mouse-cursor"></div> <!--souris JS-->
+    <div class="mouse-cursor"></div><!--souris JS-->
     <!--Menu Desktop-->
     <nav class="navigation">
         <ul>
-            <li><a href="/index.html">ACCUEIL</a></li>            
-            <li><a href="/activites.html">ACTIVITES</a></li>
-            <li><a href="/coachs.html">NOS COACHS</a></li>
-            <li><img src="assets/img/logo-site-bannière-2.png" alt="logosite"></li>
-            <li><a id="rightMenu" href="/tarifs.html">TARIFS</a></li>
-            <li><a id="rightMenu" href="/contact.html">CONTACT</a></li>
+            <li><a class="menu menuLeft" href="/index.html">ACCUEIL</a></li>            
+            <li><a class="menu menuLeft" href="/activites.html">ACTIVITES</a></li>
+            <li><a class="menu menuLeft" href="/coachs.html">NOS COACHS</a></li>
+            <li><img src="assets/img/logo-site-banniere-2.png" alt="logosite"></li>
+            <li><a class="menu rightMenu" href="/tarifs.html">TARIFS</a></li>
+            <li><a class="menu rightMenu" href="/contact.html">CONTACT</a></li>
             <li id="redtitle">OFFRE SPECIALE: <br>1er MOIS OFFERT</li>
         </ul>
     </nav>
@@ -36,31 +36,44 @@
           <li><a href="/contact.html">CONTACT</a></li>
         </ul>
       </div>
-      <a href="#" id="openBtn">
-        <div><h3 class ="title_burger">ACCUEIL</h2></div>
-        <div><img src="assets/img/logo-site-bannière-2.png" alt="logosite"></div>
-        <div class="burger-icon">
+      <!-- Menu Burger  barre de navigation-->
+      <div id="openBtn">
+        <div><h3 class ="title_burger">ACCUEIL</h3></div>
+        <div><img src="assets/img/logo-site-banniere-2.png" alt="logosite"></div>
+        <div class="burger-icon"> 
           <span></span>
           <span></span>
           <span></span>
         </div>
-      </a>
+    </div>
     <section class="redban">
         <div class="title">
             <h1>CROSSFIT TEAM HERO</h1>
             <p id="texttiltle">Devenez une meilleure version de vous-même !</p>
         </div>
         <div class="logomarketing">
-            <div><img src="assets/img/sansengagement.png" alt="logoengagement"></div>
-            <div><img src="assets/img/coach.png" alt="logocoach"></div>    
-            <div><img src="assets/img/cours.png" alt="logocours"></div>    
-            <div><img src="assets/img/ouverture.png" alt="logoouverture"></div>    
+            <div class="imgcircul">
+                <h4>Sans engagement</h4>
+                <p>100% liberté</p>
+            </div>
+            <div class="imgcircul">
+                <h4>Coachs</h4>
+                <p>100% humain</p>
+            </div>    
+            <div class="imgcircul">
+                <h4>48 cours</h4>
+                <p>100% motivation</p>
+            </div>    
+            <div class="imgcircul">
+                <h4>Ouvert 15h/jrs</h4>
+                <p>100% open</p>
+            </div>    
         </div>
     </section>
-    <section class="photoaccueil">
+    <div class="photoaccueil">
         <div><img src="assets/img/photgauchesalle.png" alt="photsalle"></div>
         <div><img src="assets/img/photodroitesalle.png" alt="crossfiteurs"></div>
-    </section>
+    </div>
     <h2 class="nosactivites"><a href="/activites.html">ACTIVITES</a></h2>
     <section class="activites">
         <div>

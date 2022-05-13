@@ -1,59 +1,80 @@
 console.log("connecté");
 /*Menu Burger*/
-var sidenav = document.getElementById("mySidenav");
-var openBtn = document.getElementById("openBtn");
-var closeBtn = document.getElementById("closeBtn");
+var sidenav = document.querySelector("#mySidenav");
+var openBtn = document.querySelector(".burger-icon");
+var closeBtn = document.querySelector("#closeBtn");
 
 openBtn.onclick = openNav;
 closeBtn.onclick = closeNav;
 
-/* Set the width of the top navigation */
+/* Set the height of the top navigation */
 function openNav() {
   sidenav.classList.add("active");
 }
 
-/* Set the width of the top navigation to 0 */
+/* Set the height of the top navigation to 0 */
 function closeNav() {
   sidenav.classList.remove("active");
 }
 /*mouse-cursor effect*/
+
 document.body.addEventListener("mousemove", function(event){
-    const mouseCursor = document.querySelector(".mouse-cursor");
+    let mouseCursor = document.querySelector(".mouse-cursor");
     mouseCursor.style.display = "block";
     mouseCursor.style.top = (event.layerY) + "px";
     mouseCursor.style.left = (event.layerX) + "px";   
 })
 
-/*newletter inscription*/
+
+  /*newletter inscription*/
+/*---------bouton newsletter footer-----------*/
 const newsletterSection = document.querySelector(".newsletter")
 newsletterSection.addEventListener("submit", function(event){ 
   event.preventDefault();  
-  const newsletter = document.querySelector("#inscription");    
+  const newsletter = document.querySelector("#inscription"); 
+  const btnNewslet = document.querySelector(".submit")
+  const email = document.querySelector(".email");
+  email.style.transition = "1s";
+  btnNewslet.style.transition = "1s";
+  btnNewslet.style.width = "80%";
+  email.style.width = "0";
+
   newsletter.value = "Merci ! tu es inscrit.";   
 })
-function activeForm(){
-  const msgAfterDelete = document.querySelector(".msgAfter");
-  msgAfterDelete.style.display = "none";
-  const submitForm = document.querySelector(".spendMessage");
-  submitForm.style.display = "block";
+
+/*Correction bug mouse-cursor lors du over sur les menu nav*/
+let navBar = document.querySelectorAll(".menu");
+let mouseCursor = document.querySelector(".mouse-cursor");
+
+function mouseUp(event) {event.addEventListener("mouseover", function() {
+  mouseCursor.style.transform = "scale(0)";
+})}
+function mouseDown(event) {event.addEventListener("mouseout", function() {
+  mouseCursor.style.transform = "scale(0.2)";
+})}
+function mouseUpDown (callback, array) {
+  array.forEach(event => callback(event));
 }
-function msgTempAfter(){
-  const formDelete = document.querySelector(".contactform");
-  formDelete.style.display = "none";
-  const msgAfter = document.querySelector(".msgAfter");
-  msgAfter.style.display = "block";
-  setTimeout(activeForm, 3000);
-}
+mouseUpDown(mouseUp, navBar);
+mouseUpDown(mouseDown, navBar);
 
 
-/*FORMULAIRE*/
-const submitButton = document.querySelector(".contactform");
-submitButton.addEventListener("submit", function(clickOnSub) {
-  clickOnSub.preventDefault();
-  msgTempAfter();  
+/*
+for(i=0; i < navBar.length; i++) {
+  navBar[i].addEventListener("mouseover", function() {
+    mouseCursor.style.transform = "scale(0)";
+  })
+  navBar[i].addEventListener("mouseout", function(){
+    mouseCursor.style.transform = "scale(0.2)";
+})}*/
+/*Correction bug mouse-cursor lors du hover sur le texttitle*/
+let redTitle = document.querySelector("#texttiltle");
+  redTitle.addEventListener("mouseover", function() {
+    mouseCursor.style.transform = "scale(0)";
+  })
+  redTitle.addEventListener("mouseout", function(){
+    mouseCursor.style.transform = "scale(0.2)";
 })
-
-
 
 
 
