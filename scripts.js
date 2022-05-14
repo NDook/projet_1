@@ -17,7 +17,6 @@ function closeNav() {
   sidenav.classList.remove("active");
 }
 /*mouse-cursor effect*/
-
 document.body.addEventListener("mousemove", function(event){
     let mouseCursor = document.querySelector(".mouse-cursor");
     mouseCursor.style.display = "block";
@@ -59,7 +58,10 @@ mouseUpDown(mouseUp, navBar);
 mouseUpDown(mouseDown, navBar);
 
 
-/*
+
+
+
+/* boucle for pour la correction bug souris
 for(i=0; i < navBar.length; i++) {
   navBar[i].addEventListener("mouseover", function() {
     mouseCursor.style.transform = "scale(0)";
@@ -67,53 +69,3 @@ for(i=0; i < navBar.length; i++) {
   navBar[i].addEventListener("mouseout", function(){
     mouseCursor.style.transform = "scale(0.2)";
 })}*/
-/*Correction bug mouse-cursor lors du hover sur le texttitle*/
-let redTitle = document.querySelector("#texttiltle");
-  redTitle.addEventListener("mouseover", function() {
-    mouseCursor.style.transform = "scale(0)";
-  })
-  redTitle.addEventListener("mouseout", function(){
-    mouseCursor.style.transform = "scale(0.2)";
-})
-
-
-
-/*newletter inscription   SAVE
-document.addEventListener("submit", function(event){ 
-  event.preventDefault();  
-  const newsletter = document.querySelector("#inscription");    
-  newsletter.value = "Merci ! tu es inscrit.";   
-});*/
-/*newletter inscription
-const newsButton = document.querySelector("#inscription");
-newsButton.addEventListener("click", function(event){ 
-    event.preventDefault();
-    const email = document.querySelector("#email");
-    const newsletter = document.querySelector("#inscription");
-    if(email.value == "")  {
-      newsletter.value = "Renseigne ton email."; 
-    }
-    else {
-      newletter.value = "Merci ! tu es inscrit."
-    }
-      
-});*/
-
-
-
-
-
-
-
-
-/* effet interval "Blur" sur Tilte Page 1 (ko)
-const titletext = document.querySelector("#texttiltle");
-console.log(titletext.style);
-function titleEffect(titletext) {    
-    if(titletext.style.filter == "blur(0)"){
-        titletext.style.filter = "blur(1px)";
-}   else {
-        titletext.style.filter = "blur(0)";
-}    
-};
-setInterval(titleEffect, 2000);  */ 
