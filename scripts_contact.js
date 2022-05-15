@@ -7,6 +7,21 @@ let textArea = document.querySelector("#message");
   textArea.addEventListener("mouseout", function(){
     mouseCursor.style.transform = "scale(0.2)";
 })
+
+/* récuperer mon Formulaire dans une variable */
+const contactForm = document.querySelector(".contactform");
+  /*récupérer le Prénom dans une fonction */
+  
+
+
+
+
+/*Evenement à la soumission du formulaire */
+contactForm.addEventListener("submit", function(clickOnSub){
+  clickOnSub.preventDefault();
+  
+  activeDisplayTemp()
+})
 /*CREATION DES ELEMENTS APRES SOUMMISSION DU FORMULAIRE */
 const formElement = document.querySelector(".contact");
 /*Création div pour msg d'attente */
@@ -33,21 +48,15 @@ formElement.appendChild(spendMsg);
 /*création du titre */
 const spendMsgTitle = document.createElement("h2");
 spendMsgTitle.classList.add("titlespend");
-spendMsgTitle.innerHTML = "MESSAGE ENVOYE !"
+
 spendMsg.appendChild(spendMsgTitle);
 /*création du paragraphe */
 const spendMsgParag = document.createElement("p");
 spendMsgParag.classList.add("spendMessageParag");
-spendMsgParag.innerHTML = "🔥 - La Team Crossfift Hero vous remercie et un coach va prendre contact avec vous \<br>\ dans les plus brefs délais. - 🔥"
+spendMsgParag.innerHTML = "- La Team Crossfift Hero  va prendre contact avec toi.- \<br>\🔥 A très vite ! 🔥"
 spendMsg.appendChild(spendMsgParag);
 
-/* récuperer mon Formulaire dans une variable */
-const contactForm = document.querySelector(".contactform");
-/*Eveneement à la soumission du formulaire */
-contactForm.addEventListener("submit", function(clickOnSub){
-  clickOnSub.preventDefault();
-  activeDisplayTemp()
-})
+
 /* fonction pour activer et désactiver les display */
 function activeDisplayTemp () {
   contactForm.style.display = "none";
@@ -56,6 +65,8 @@ function activeDisplayTemp () {
 }
 function activeDisplaySpend () {
   ballElement.style.display = "none";
+  const firstName = document.querySelector("#firstname").value;
+  spendMsgTitle.innerHTML = `Merci ${firstName} !\<br>\ Ton message est transmis à notre équipe.`;
   spendMsg.style.display = "block";
 }
 

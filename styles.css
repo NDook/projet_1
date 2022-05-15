@@ -358,7 +358,7 @@ input:focus{
     font-weight: 600;
 }
 .contactform {  /* Formulaire */
-    display: block;
+    display: block; /* "none" lors de l'envoi du formulaire (JS)*/
     align-self: center;
     justify-self: center;
     width: 80%;
