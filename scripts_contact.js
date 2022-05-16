@@ -8,20 +8,6 @@ let textArea = document.querySelector("#message");
     mouseCursor.style.transform = "scale(0.2)";
 })
 
-/* récuperer mon Formulaire dans une variable */
-const contactForm = document.querySelector(".contactform");
-  /*récupérer le Prénom dans une fonction */
-  
-
-
-
-
-/*Evenement à la soumission du formulaire */
-contactForm.addEventListener("submit", function(clickOnSub){
-  clickOnSub.preventDefault();
-  
-  activeDisplayTemp()
-})
 /*CREATION DES ELEMENTS APRES SOUMMISSION DU FORMULAIRE */
 const formElement = document.querySelector(".contact");
 /*Création div pour msg d'attente */
@@ -57,6 +43,14 @@ spendMsgParag.innerHTML = "- La Team Crossfift Hero  va prendre contact avec toi
 spendMsg.appendChild(spendMsgParag);
 
 
+/* récuperer mon Formulaire dans une variable */
+const contactForm = document.querySelector(".contactform"); 
+/*Evenement à la soumission du formulaire */
+contactForm.addEventListener("submit", function(clickOnSub){
+  clickOnSub.preventDefault();
+  
+  activeDisplayTemp()
+})
 /* fonction pour activer et désactiver les display */
 function activeDisplayTemp () {
   contactForm.style.display = "none";

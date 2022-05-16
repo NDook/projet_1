@@ -481,6 +481,9 @@ input:focus{
 ***********************************************************************/
 
 @media screen and (max-width: 950px) {
+    .mouse-cursor{
+        transform: scale(0);
+    }
     .photoaccueil{
         display: block;
         width: 100%;
@@ -502,7 +505,7 @@ input:focus{
         padding-bottom: 50px;
     }
     footer{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 80% 20%;
         height: 100%;
     }
     footer ul{
@@ -512,8 +515,9 @@ input:focus{
         flex-direction: column;
         align-items: flex-end;
     }
-    .sociallogos div img {
-        width: 70%;
+    .sociallogos div {
+        padding-bottom: 10px;
+        width: 50%;
     }
     .email, .submit{
         width: 50%;
@@ -526,14 +530,13 @@ input:focus{
     /*Menu Burger*/
     .sidenav {
         display:block;
-        height: 35%;
+        height: 50%;
         width: 100%;
         position: fixed;
         z-index: 1;
         top: -1000px;
         background-color: #ffffff;
         border-bottom: lightgray 1px solid;
-        opacity: 99%;
         padding-top: 30px;
         transition: top 0.5s ease;
     }
