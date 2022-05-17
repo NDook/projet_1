@@ -12,8 +12,8 @@
     <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" />
 </head>
 <body>
-    <div class="mouse-cursor"></div><!--souris JS-->
-    <!--Menu Desktop-->
+    <div class="mouse-cursor"></div> <!--souris JS-->
+    <!-- Menu Desktop-->
     <nav class="navigation">
         <ul>
             <li><a class="menu menuLeft" href="/index.html">ACCUEIL</a></li>            
@@ -38,7 +38,7 @@
       </div>
       <!-- Menu Burger  barre de navigation-->
       <div id="openBtn">
-        <div><h3 class ="title_burger">ACCUEIL</h3></div>
+        <div><h3 class ="title_burger">CONTACT</h3></div>
         <div><img src="assets/img/logo-site-banniere-2.png" alt="logosite"></div>
         <div class="burger-icon"> 
           <span></span>
@@ -47,64 +47,82 @@
         </div>
     </div>
     <section class="redban">
-        <div class="title">
-            <h1>CROSSFIT TEAM HERO</h1>
-            <p id="texttiltle">Devenez une meilleure version de vous-même !</p>
-        </div>
-        <div class="logomarketing">
-            <div class="imgcircul">
-                <h4>Sans engagement</h4>
-                <p>100% liberté</p>
-            </div>
-            <div class="imgcircul">
-                <h4>Coachs</h4>
-                <p>100% humain</p>
-            </div>    
-            <div class="imgcircul">
-                <h4>48 cours</h4>
-                <p>100% motivation</p>
-            </div>    
-            <div class="imgcircul">
-                <h4>Ouvert 15h/jrs</h4>
-                <p>100% open</p>
-            </div>    
-        </div>
+        <h2 class="subtitle">CONTACTEZ NOUS !</h2>
     </section>
-    <div class="photoaccueil">
-        <div><img src="assets/img/photgauchesalle.png" alt="photsalle"></div>
-        <div><img src="assets/img/photodroitesalle.png" alt="crossfiteurs"></div>
-    </div>
-    <h2 class="nosactivites"><a href="/activites.html">ACTIVITES</a></h2>
-    <section class="activites">
-        <div>
-            <h3>WOD</h3>
-            <p>WOD est la "Séance d'entraînement de la journée. <br>
-            En anglais WOD signifie "Workout Of the Day" autrement dit "l'entrainement du jour". D’une durée de 1h, le WOD est donc une liste d'exercice 
-            qui constitue votre programme du jour pour un entrainement de crossfit.</p>
+    <section class="contact">
+        <div class="contact-image">
+            <div><img src="/assets/img/contact.jpg" alt="image contact"></div>
+            <p>- Crossfit Team Hero - <br>
+                20 avenue du warrior <br>
+                69480 POMMIERS <br>
+                06 02 13 12 11
+            </p>
         </div>
-        <div>
-            <h3>TEAM WOD</h3>
-            <p>Les Team WOD, c’est des WOD... mais en équipes ! <br>
-            Dépassez-vous encore plus en équipe !</p>
-        </div>
-        <div>
-            <h3>WOD GYM</h3>
-            <p>Entrainement spécifique basé sur la Gymnastique ! <br>
-            Les anneaux, les barres de tractions, les exercices de poids du corps..... Marchez sur les mains deviendra une habitude pour vous ! <br>
-            Vous gagnerez en coordination, mobilité et en souplesse
-            Dépassez-vous encore plus en équipe !</p>
-        </div>
-        <div>
-            <h3>LEVEL UP</h3>
-            <p>Entrainement spécifique basé sur la Gymnastique ! <br>
-            Les anneaux, les barres de tractions, les exercices d epoids du corps..... Marchez sur les mains deviendra une habitude spour vous !
-            Vous gagnerez en coordination, mobilité et en souplesse</p>
-        </div>
-        <div>
-            <h3>WOD CARDIO</h3>
-            <p>Vos capacités cardiovasculaires et votre endurance seront augmentées grâce à la haute intensité. <br>
-            Asso Bike, rameur, running, nombre de répétitions maximum....</p>
-        </div>
+        <form class="contactform">
+            <div>
+                <label for="name">Nom:*</label>
+                <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                minlength="1"
+                maxlength="20"
+                />
+            </div>
+            <div>
+                <label for="firstname">Prénom:*</label>
+                <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                required
+                minlength="1"
+                maxlength="20"
+                />
+            </div>
+            <div>
+                <label for="email">Email:*</label>
+                <input
+                type="email"
+                id="emailform"
+                name="email"
+                required
+                minlength="4"
+                maxlength="50"
+                />
+            </div>
+            <div>
+                <label for="phone">Téléphone:</label>
+                <input
+                type="tel"
+                id="phone"
+                name="phone"
+                />
+            </div>
+            <div class="textarea">
+                <label for="message">Message:*</label>
+                <textarea id="message" name="message" required minlength="1"></textarea>
+            </div>
+            <div class="mandatory">
+                <div>*champs obligatoire</div>
+            </div>
+            <div class="submit-button">
+                <div><input type="submit" id="submit" name="submit" value="ENVOYER" /></div>
+            </div>      
+        </form>
+        <!-- element d'attente après sousmission du formulaire-->
+        <!-- <div class="pointDiv">
+            <span class="msgAfter"></span> 
+            <span class="msgAfter1"></span>
+            <span class="msgAfter2"></span>
+        </div> -->
+        <!-- element après sousmission du formulaire-->
+        <!-- <div class="spendMessage">
+            <h2 class="titlespend">MESSAGE ENVOYE</h2>
+            <p>🔥 - La Team Crossfift Hero vous remercie et un coach va prendre contact avec vous <br> dans les plus brefs délais. - 🔥</p>
+
+        </div> -->
     </section>
     <footer>
         <ul>
@@ -119,8 +137,8 @@
             <p>Astuces, conseils, nutrition, évènements… <br>
             Inscrivez-vous pour recevoir notre newsletter fitness chaque mois.</p>
             <form class="newsletter">
-                <input class="email" type="text" name="email" placeholder="Votre email" id="email" required>
-                <input class="submit" type="submit" name="submit" value="Je m'inscris" id="inscription">
+                <input class="email" type="text" name="mail" placeholder="Votre email" id="email" required>
+                <input class="submit" type="submit" name="sub" value="Je m'inscris" id="inscription">
             </form>
         </div>
         <div class="sociallogos">
@@ -128,8 +146,8 @@
             <div><a href="https://www.instagram.com/?hl=fr" target="blank"><img src="assets/img/instagram.png" alt="logo instagram"></a></div>
             <div><a href="https://www.youtube.com/?hl=fr&gl=FR" target="blank"><img src="assets/img/youtube.png" alt="logo youtube"></a></div>
         </div>
-    </footer>
+    </footer> 
     <script src="/scripts.js"></script> 
-    <script src="/scripts_accueil.js"></script>   
+    <script src="/scripts_contact.js"></script>   
 </body>
 </html>
