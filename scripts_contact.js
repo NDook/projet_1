@@ -1,4 +1,3 @@
-console.log("script contact connecté");
 /*Correction bug mouse-cursor lors du over sur le text area*/
 let textArea = document.querySelector("#message");
   textArea.addEventListener("mouseover", function() {

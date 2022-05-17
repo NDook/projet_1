@@ -1,4 +1,3 @@
-console.log("connecté");
 /*Menu Burger*/
 var sidenav = document.querySelector("#mySidenav");
 var openBtn = document.querySelector(".burger-icon");
