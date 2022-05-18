@@ -30,11 +30,12 @@ ballElement.appendChild(spanThird);
 const spendMsg = document.createElement("div");
 spendMsg.classList.add("spendMessage");
 formElement.appendChild(spendMsg);
+
 /*création du titre */
 const spendMsgTitle = document.createElement("h2");
 spendMsgTitle.classList.add("titlespend");
-
 spendMsg.appendChild(spendMsgTitle);
+
 /*création du paragraphe */
 const spendMsgParag = document.createElement("p");
 spendMsgParag.classList.add("spendMessageParag");
