@@ -4,10 +4,21 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+    -webkit-tap-highlight-color:transparent;
 }
 body {
     font-family: 'Roboto', sans-serif;
 }
+
+input, textarea, select { 
+    -webkit-appearance: none; 
+    border-radius: 0; 
+    -webkit-border-radius:0; } 
+
+div, a, section, article, span, img, h1, h2, h3, h4, h5 ,h6 { 
+    -webkit-user-select:none; 
+    -moz-user-select:none; }
+
 
 /*initialiser la couleur des a*/
 a {
